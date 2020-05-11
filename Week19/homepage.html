@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <img src="images/brazil.jpeg" alt="brazilPic" style="width:100%;">
+        <div class="headerText">
+            <h1>Alexander Nygård</h1>
+            <p>Personal website</p>
+        </div>
+    </div>
+
+    <div id="p_info">
+        <div id="personalInfo">
+            <h1>About me</h1>
+            <hr>
+            <p>I am a 18 year old Norwegian high school student, currently attending UWC ISAK Japan in Karuizawa, Japan.</p>
+            <p>I am currently living at Nesodden, Norway, a small municipality outside of Oslo, the capital.</p>
+            <p>In my spare time, I enjoy doing the following things:</p>
+            <ul>
+                <li>Read</li>
+                <li>Excercise</li>
+                <li>Play basketball</li>
+                <li>Play video games</li>
+                <li>Hang out with friends</li>
+                <li>Watch movies</li>
+                <li>Eat</li>
+            </ul>
+            <p>My favorite subjects include Computer Science, Global Politics and Physics.</p>
+        </div>
+
+        <div id="profilePic">
+            <img src="images/profilePic.jpg" alt="profilePic" style="width:70%;">
+        </div>
+
+    </div>
+
+    <div class="familyTitle">
+        <h2>My siblings</h1>
+        <hr>
+    </div>
+
+    <div class="family_section">
+        <img id="familyPic" src="images/familyPic.jpeg" alt="familyPic">
+        <div class="familyLabels" id="audi">Aud Irene</div>
+        <div class="familyLabels" id="jacob">Jacob</div>
+        <div class="familyLabels" id="william">William</div>
+        <div class="familyLabels" id="alex">Alexander</div>
+
+    </div>
+
+
+
+    
+
+</body>
+
+<script>
+window.onscroll = function() {appear_rows()};
+
+
+
+function appear_rows() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        document.getElementById("p_info").className = "AFTER_personalInfo_container";
+    } else if (document.body.scrollTop < 50 || document.documentElement.scrollTop < 50) {
+        document.getElementById("p_info").className = "BEFORE_personalInfo_container";
+    }
+}
+
+</script>
+
+
+</html>

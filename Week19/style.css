@@ -1,0 +1,112 @@
+@keyframes fadeTitle {
+    from {opacity: 0%; top: 40%;}
+    to {opacity: 100%; top: 30%;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Centered text */
+.headerText {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+    animation-name: fadeTitle;
+    animation-duration: 2s;
+}
+
+.BEFORE_personalInfo_container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    opacity: 0%;
+    animation-name: fadeOut;
+    animation-duration: 1s;
+}
+
+.AFTER_personalInfo_container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    animation-name: fadeIn;
+    animation-duration: 2.5s;
+}
+
+#personalInfo {
+    padding: 50px;
+}
+
+#p_info > div {
+    width: 50%;
+}
+
+
+
+#profilePic {
+    text-align: right;
+}
+
+p {
+    font-size: large;
+}
+
+ul {
+    font-size: large;
+}
+
+.familyTitle {
+    text-align: center;
+    font-size: x-large;
+}
+
+#familyPic {
+    width: 100%;
+
+}
+
+.family_section {
+    position: relative;
+    color: white;
+    font-size: xx-large;
+}
+
+.familyLabels {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: black;
+}
+
+#audi {
+    top: 30%;
+    left: 10%;
+}
+
+#jacob {
+    top: 10%;
+    left: 30%;
+}
+
+#william {
+    top: 25%;
+    left: 60%;
+}
+
+#alex {
+    top: 10%;
+    left: 85%;
+}
