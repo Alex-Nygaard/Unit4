@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript practice</title>
+
+<script>
+
+function pigLatin() {
+    var input = document.getElementById("input").value
+    var translation = input.slice(1) + input.slice(0, 1) + "ay"
+    document.getElementById("translatedText").innerHTML = translation
+    console.log(translation)
+}
+
+
+
+</script>
+
+</head>
+<body>
+    <h1>Pig latin</h1>
+
+    <p>Enter word:</p>
+    <input type="text" id="input">
+    <button type="button" onclick="pigLatin()">Translate</button>
+    <p>The Pig Latin is:</p>
+    <p id="translatedText"></p>
+    
+</body>
+</html>
+
+

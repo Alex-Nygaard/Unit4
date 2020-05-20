@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post it notes</title>
+
+    <style>
+        #postIt {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            text-align: center;
+            vertical-align: middle;
+            margin: 30px;
+            padding: 30px;
+            font-size: x-large;
+            
+        }
+    </style>
+</head>
+
+<script>
+
+function postItCreator() {
+    var input = document.getElementById("input").value;
+    document.getElementById("BEFOREpostIt").id = "postIt";
+    document.getElementById("postIt").innerHTML = input;
+}
+
+
+</script>
+
+<body>
+    <h1>Post It creator</h1>
+
+    <p>Enter word:</p>
+    <input type="text" id="input">
+    <button type="button" onclick="postItCreator()">Post</button>
+
+    <div id="BEFOREpostIt"></div>
+</body>
+</html>
+

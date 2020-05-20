@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+</head>
+
+<script>
+
+function vowelCounter() {
+    var input = document.getElementById("input").value;
+    var i;
+    var aCount = 0;
+    var eCount = 0;
+    var iCount = 0;
+    var oCount = 0;
+    var uCount = 0;
+    
+    for (i of input.split("")) {
+        switch(i.toLowerCase()) {
+            case "a":
+                aCount++;
+                break;
+            case "e":
+                eCount++;
+                break;
+            case "i":
+                iCount++;
+                break;
+            case "o":
+                oCount++;
+                break;
+            case "u":
+                uCount++;
+                break;
+        }
+    }
+
+    document.getElementById("aNum").innerHTML = "a: " + aCount;
+    console.log("A count: ", aCount);
+    document.getElementById("eNum").innerHTML = "e: " + eCount;
+    console.log("E count: ", eCount);
+    document.getElementById("iNum").innerHTML = "i: " + iCount;
+    console.log("I count: ", iCount);
+    document.getElementById("oNum").innerHTML = "o: " + oCount;
+    console.log("O count: ", oCount);
+    document.getElementById("uNum").innerHTML = "u: " + uCount;
+    console.log("U count: ", uCount);
+
+    // set the data
+    var data = {
+        header: ["Vowel", "Count"],
+        rows: [
+        ["A", aCount],
+        ["E", eCount],
+        ["I", iCount],
+        ["O", oCount],
+        ["U", uCount]
+    ]};
+
+    // create the chart
+    var chart = anychart.bar();
+
+    // add the data
+    chart.data(data);
+
+    // set the chart title
+    chart.title("Number of vowels in input");
+
+    // draw
+    chart.container("container");
+    chart.draw();
+
+}
+
+
+</script>
+
+<body>
+    <h1>Vowels counter</h1>
+
+    <p>Enter sentence below:</p>
+    <input type="text" id="input">
+    <button type="button" onclick="vowelCounter()">Count</button>
+    <p>Number of vowels:</p>
+
+    <div id="aNum"></div>
+    <div id="eNum"></div>
+    <div id="iNum"></div>
+    <div id="oNum"></div>
+    <div id="uNum"></div>
+
+    <div id="container" style="height: 300px;"></div>
+
+</body>
+</html>
