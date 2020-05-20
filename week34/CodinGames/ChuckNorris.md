@@ -1,6 +1,6 @@
 # Chuck Norris Codin challenge
 
-![finishedCode](chuckNorris.jpg)
+![finishedCode](chuckNorris.png)
 
 ### Code:
 ```.py
